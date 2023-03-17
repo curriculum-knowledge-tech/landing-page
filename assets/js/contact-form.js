@@ -1,3 +1,14 @@
+function convertDate(time) {
+     //time should be server timestamp seconds only
+     let dateInMillis = time * 1000
+     let date = new Date(dateInMillis)
+     let myDate = date.toLocaleDateString()
+     let myTime = date.toLocaleTimeString()
+     myDate = myDate.replaceAll('/', '-')
+     return myDate + " " + myTime
+     }
+
+
 // Get the form element
 var thisForm = document.querySelector('#contact-us-form');
 
@@ -18,6 +29,7 @@ thisForm.addEventListener('submit', function (e) {
      formData.forEach(function (value, key) {
           data[key] = value;
      });
+     data['timestamp'] = new Date().toLocaleString()
 
      // Send the data to Firebase
      var database = firebase.database();
