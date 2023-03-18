@@ -953,7 +953,6 @@ section {
    --------------------------------------------------------------*/
 .services {
      padding-bottom: 30px;
-     scroll-margin: 50px;
 }
 
 .services .container {
@@ -1030,7 +1029,6 @@ section {
    --------------------------------------------------------------*/
 .portfolio {
      margin-bottom: 30px;
-     scroll-margin: 50px;
 }
 
 .portfolio-item {
@@ -1228,7 +1226,6 @@ section {
 
 .team-student-testimonials {
      background: #f5f9fc;
-     scroll-margin: 50px;
 }
 
 .team-cards-row {
