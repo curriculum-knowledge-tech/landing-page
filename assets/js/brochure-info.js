@@ -33,6 +33,6 @@ thisForm.addEventListener('submit', function (e){
           var database = app_brochure.database();
           const newRef = database.ref('brochure-form-responses').push(data);
 
-          window.location.replace("index.html");
+          window.location.replace("enroll-now.html");
      }
 )
