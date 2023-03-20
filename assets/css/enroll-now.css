@@ -10,3 +10,13 @@
 .download-button:hover {
      background: #629fd3;
 }
+
+.dropdown {
+     border-radius: 0;
+     font-size: 14px;
+     padding: 10px 15px;
+}
+
+.dropdown:required:invalid {
+     color: #6c757d;
+}
