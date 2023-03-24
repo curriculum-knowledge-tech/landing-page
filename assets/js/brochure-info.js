@@ -18,6 +18,9 @@ var thisForm = document.querySelector('#brochure-form');
 thisForm.addEventListener('submit', function (e){
 
          document.getElementById('downloadLink').click()
+         thisForm.querySelector('.loading').classList.add('d-block');
+         thisForm.querySelector('.error-message').classList.remove('d-block');
+         thisForm.querySelector('.sent-message').classList.remove('d-block');
 
           // Prevent the form from submitting
           e.preventDefault();
@@ -33,6 +36,18 @@ thisForm.addEventListener('submit', function (e){
           var database = app_brochure.database();
           const newRef = database.ref('brochure-form-responses').push(data);
 
-          window.location.replace("index.html");
+
+         
+          newRef.then(function () {
+               thisForm.querySelector('.loading').classList.remove('d-block');
+               thisForm.querySelector('.error-message').classList.remove('d-block');
+               thisForm.querySelector('.sent-message').classList.add('d-block');
+               window.location.replace("index.html");
+          }).catch(function (error) {
+               thisForm.querySelector('.loading').classList.remove('d-block');
+               thisForm.querySelector('.error-message').innerHTML = "Failed to send a message. Please try later or send an email at info@knowledge.tech";
+               thisForm.querySelector('.error-message').classList.add('d-block');
+          });
+          
      }
 )
