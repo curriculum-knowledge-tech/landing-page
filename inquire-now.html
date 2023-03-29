@@ -5,7 +5,7 @@
      <meta charset="utf-8">
      <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-     <title>Emblem signs as Knowledge Partner - Knowledge Streams</title>
+     <title>Inquire Now - Knowledge Streams</title>
      <meta content="" name="description">
      <meta content="" name="keywords">
 
@@ -29,6 +29,11 @@
      <!-- Template Main CSS File -->
      <link href="assets/css/style.css" rel="stylesheet">
      <link href="assets/css/event_details.css" rel="stylesheet">
+     <link href="assets/css/enroll-now.css" rel="stylesheet">
+
+     <!-- Firebase script -->
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
      <!-- =======================================================
   * Template Name: Mamba - v4.10.0
@@ -118,60 +123,125 @@
      <main id="main">
 
           <!-- ======= Breadcrumbs Section ======= -->
-          <!-- <section class="breadcrumbs">
+          <section class="breadcrumbs">
                <div class="container">
 
                     <div class="d-flex justify-content-between align-items-center">
-                         <h2>Dr. Ishrat visits Knowledge Streams</h2>
+                         <h2>Inquire Now</h2>
                     </div>
 
                </div>
-          </section> -->
+          </section>
           <!-- End Breadcrumbs Section -->
 
           <section class="inner-page">
                <div class="container">
-                    <h2 class="event_heading">Emblem becomes Knowledge Partner</h2>
-                    <div class="event_details">
-                         <img class="event_pic" src="assets/img/events/emblem_sign/emblem1.jfif" alt="" />
+                    <h1 class="event_heading">Land the job you desire</h1>
+                    <br />
+                    <div class="event_details_curriculum">
                          <p class="event_text">
-                              Pakistan's IT sector doesn't lack talent but it always needed someone to fill the gap
-                              between the skills of fresh graduates and the requirements of the IT industry. KnowlEDGE
-                              Streams took the initiative to fill the gap and Emblem takes pride in contributing to the
-                              initial batch of grads, who'd be able to develop softskills and polish their emotional and
-                              social skills to meet the requirements of the tech industry.
+                              Join our bootcamp at our corporate training facility. It is designed to help university
+                              graduates meet the needs of the IT industry, globally.
+                              <br /><br />
                          </p>
-
-                         <img class="event_pic" src="assets/img/events/emblem_sign/emblem2.jfif" alt="" />
-
-                         <p class="event_text">
-                              On Thursday, the Emblem team visited the KnowlEDGE Streams campus to mark the six-week
-                              success of the first batch of the pilot program. We were delighted to see the program
-                              development and spend time with candidates, hearing their personal views regarding the
-                              initiative and how it's helping them prepare them for their professional lives.
-                         </p>
-                         <img class="event_pic" src="assets/img/events/emblem_sign/emblem3.jfif" alt="" />
-
-                         <p class="event_text">
-                              On this occasion, another agreement was signed between Emblem and KnowlEDGE Streams. Both
-                              entities are now Knowledgepartners in the furtherance of the following goals:
-                         <ul class="event_list">
+                         <h2 class="event_heading" style="text-align: left;">You will experience</h2>
+                         <br />
+                         <ul>
                               <li>
-                                   Focus on self improvement of fresh graduates to bridge the talent-employment gap in
-                                   IT
-                                   sector
+                                   Hands-on training
                               </li>
                               <li>
-                                   Focus on self improvement of fresh graduates to bridge the talent-employment gap in
-                                   IT
-                                   sector
+                                   Industry driven curriculum; Specialization built on fundamentals
                               </li>
-                              <li>Mentor all trainees</li>
-                              <li>Provide focused training in industry verticals of interest</li>
-                              <li>Provide experienced employees as part-time instructors for deeper engagement</li>
+                              <li>
+                                   Experiential soft skills development
+                                   <ul>
+                                        <li>
+                                             Communications, leadership and teamwork
+                                        </li>
+                                   </ul>
+                              </li>
+                              <li>
+                                   Brand building of trainees
+                                   <ul>
+                                        <li>
+                                             Intensive technical and culture fit interview preparation
+                                        </li>
+                                        <li>
+                                             Mentoring by industry professionals
+                                        </li>
+                                   </ul>
+                              </li>
+                              <li>
+                                   Networking events with industry leaders and employers
+                              </li>
                          </ul>
+                         <br />
+                    </div>
+               </div>
+          </section>
+          <section class="contact">
+               <div class="container" style="max-width: 900px;" data-aos="fade-up">
+                    <div class="row">
+                         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+                              <p>Kindly fill the following details to download the Knowledge Streams
+                                   brochure.</p>
+                              <form action="" id="brochure-form" method="post" role="form" class="php-email-form">
+                                   <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name"
+                                             required>
+                                   </div>
+                                   <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email"
+                                             placeholder="Email" required>
+                                   </div>
+                                   <div class="form-group">
+                                        <input type="number" class="form-control" name="contactNo" id="contactNo"
+                                             placeholder="Contact No." required>
+                                   </div>
+                                   <div class="form-group">
+                                        <select class="form-control dropdown" required>
+                                             <option value="" selected disabled hidden>
+                                                  Select
+                                                  the course
+                                                  you are
+                                                  interested in
+                                             </option>
+                                             <option value="MERN">MERN</option>
+                                             <option value="MEAN">MEAN</option>
+                                             <option value="React">React</option>
+                                             <option value="Node">Node</option>
+                                             <option value="Angular">Angular</option>
+                                             <option value="Python Django: Web Development">Python
+                                                  Django: Web
+                                                  Development</option>
+                                             <option value=".NET">.NET</option>
+                                             <option value="Java Core">Java Core</option>
+                                             <option value="Java Spring">Java Spring</option>
+                                             <option value="PHP">PHP</option>
+                                             <option value="Data Science: Machine Learning">Data Science:
+                                                  Machine
+                                                  Learning</option>
+                                             <option value="Artificial Intelligence: Machine Learning">
+                                                  Artificial
+                                                  Intelligence: Machine Learning</option>
+                                             <option value="Cyber Security">Cyber Security</option>
 
+                                        </select>
+                                   </div>
+                                   <div class="my-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Thank you!</div>
+                                   </div>
+                                   <div class="text-center">
+                                        <button type="submit">Submit to Download Detailed Brochure</button>
+                                        <a id="downloadLink" href="./assets/pdf/KS Brochure.pdf" download
+                                             style="display: hidden;"></a>
 
+                                   </div>
+                              </form>
+                         </div>
                     </div>
                </div>
           </section>
@@ -192,6 +262,9 @@
 
      <!-- Template Main JS File -->
      <script src="assets/js/main.js"></script>
+     <script src="assets/js/brochure-info.js"></script>
+
+
 
 </body>
 
