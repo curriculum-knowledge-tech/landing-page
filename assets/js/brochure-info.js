@@ -28,10 +28,13 @@ thisForm.addEventListener('submit', function (e){
 
           var formData = new FormData(thisForm);
 
+          const courseDropdownValue = document.querySelector('#course-dropdown').value;
+
           var data = {};
           formData.forEach(function (value, key) {
                data[key] = value;
           });
+          data['courses'] = courseDropdownValue
           data['timestamp'] = new Date().toLocaleString()
 
           var database = app_brochure.database();
