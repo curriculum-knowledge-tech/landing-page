@@ -62,7 +62,7 @@
 
 }
 
-summary {
+/* summary {
      display: inline-flex;
      align-items: center;
      justify-content: center;
@@ -84,4 +84,18 @@ summary::before {
 details[open] summary::before {
      content: '▼';
 
+} */
+
+.collapsible-text-summary {
+     margin-bottom: 20px;
+
+}
+
+.collapsible-text-summary::marker {
+     font-size: 1.25em;
+}
+
+.collapsible-text-summary-heading {
+     float: left;
+     margin-right: 12px;
 }
