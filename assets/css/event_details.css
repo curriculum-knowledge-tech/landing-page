@@ -99,3 +99,18 @@ details[open] summary::before {
      float: left;
      margin-right: 12px;
 }
+
+.collapsible-text-summary-child {
+     margin-bottom: 20px;
+
+}
+
+.collapsible-text-summary-child::marker {
+     font-size: 1em;
+}
+
+.collapsible-text-summary-heading-child {
+     float: left;
+     margin-right: 12px;
+     text-decoration: underline;
+}
