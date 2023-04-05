@@ -24,6 +24,9 @@
 .event_text {
      text-align: justify;
      width: 60%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .event_heading {
@@ -56,5 +59,29 @@
           width: 70%;
      }
 
+
+}
+
+summary {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+}
+
+summary::-webkit-details-marker {
+     display: none;
+}
+
+summary::before {
+     display: inline-block;
+     content: '▶';
+     margin-right: 0.5em;
+     margin-bottom: 0.5em;
+     width: 1em;
+     font-size: 0.75em;
+}
+
+details[open] summary::before {
+     content: '▼';
 
 }
