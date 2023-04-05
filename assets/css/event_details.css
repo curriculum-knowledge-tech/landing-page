@@ -103,11 +103,12 @@ details[open] summary::before {
 
 .collapsible-text-summary-child {
      margin-bottom: 20px;
-
+     text-align: left;
 }
 
 .collapsible-text-summary-child::marker {
      font-size: 1em;
+
 }
 
 .collapsible-text-summary-heading-child {
@@ -115,4 +116,5 @@ details[open] summary::before {
      display: inline;
      margin-left: 12px;
      text-decoration: underline;
+
 }
