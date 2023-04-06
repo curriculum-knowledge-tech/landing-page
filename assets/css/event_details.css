@@ -62,7 +62,7 @@
 
 }
 
-summary {
+/* summary {
      display: inline-flex;
      align-items: center;
      justify-content: center;
@@ -83,5 +83,38 @@ summary::before {
 
 details[open] summary::before {
      content: '▼';
+
+} */
+
+.collapsible-text-summary {
+     margin-bottom: 20px;
+
+}
+
+.collapsible-text-summary::marker {
+     font-size: 1.5em;
+}
+
+.collapsible-text-summary-heading {
+     /* float: left; */
+     display: inline;
+     margin-left: 12px;
+}
+
+.collapsible-text-summary-child {
+     margin-bottom: 20px;
+     text-align: left;
+}
+
+.collapsible-text-summary-child::marker {
+     font-size: 1em;
+
+}
+
+.collapsible-text-summary-heading-child {
+     /* float: left; */
+     display: inline;
+     margin-left: 12px;
+     text-decoration: underline;
 
 }
