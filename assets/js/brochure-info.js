@@ -46,7 +46,9 @@ thisForm.addEventListener('submit', function (e){
                thisForm.querySelector('.loading').classList.remove('d-block');
                thisForm.querySelector('.error-message').classList.remove('d-block');
                thisForm.querySelector('.sent-message').classList.add('d-block');
-               window.location.replace("index.html");
+
+               document.getElementById('inquire-now-form-container').classList.add('d-none')
+               document.getElementById('inquire-now-confirm-message').classList.remove('d-none')
           }).catch(function (error) {
                thisForm.querySelector('.loading').classList.remove('d-block');
                thisForm.querySelector('.error-message').innerHTML = "Failed to send a message. Please try later or send an email at info@knowledge.tech";
